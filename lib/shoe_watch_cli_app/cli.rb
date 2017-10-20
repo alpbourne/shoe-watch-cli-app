@@ -1,0 +1,3 @@
+class ShoeWatchCliApp::CLI
+
+end
