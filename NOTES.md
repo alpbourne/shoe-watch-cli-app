@@ -7,7 +7,6 @@ Structure:
     What kind of shoe are you looking for today?
       1. Running
       2. Fashion
-      3. Training
 
   If input = 1
     present user with the following information for a bestselling running shoe from each of the brands
