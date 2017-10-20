@@ -14,6 +14,7 @@ Structure:
       -shoe name
       -description
       -price
+      -URL
 
   If input = 2
     present user with the following information for a bestselling fashion shoe from each of the brands

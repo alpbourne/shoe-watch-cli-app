@@ -1,4 +1,5 @@
 class ShoeWatchCliApp::Shoes
+  attr_accessor :name, :brand, :price, :description, :url
 
   def self.scrape_addidas_running
 
