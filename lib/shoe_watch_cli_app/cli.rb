@@ -1,10 +1,8 @@
 class ShoeWatchCliApp::CLI
-  def call
-    start
-  end
 
-  def start
+  def call
     greeting
+    goodbye
   end
 
   def greeting
@@ -15,4 +13,9 @@ class ShoeWatchCliApp::CLI
     puts "3. Training"
     input = gets.strip.downcase
   end
+
+  def goodbye
+    puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"
+  end
+
 end
