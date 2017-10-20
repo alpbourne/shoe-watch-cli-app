@@ -12,4 +12,16 @@ class ShoeWatchCliApp::Shoes
 
   end
 
+  def self.scrape_addidas_fashion
+
+  end
+
+  def self.scrape_nike_fashion
+
+  end
+
+  def self.scrape_under_armour_fashion
+
+  end
+
 end
