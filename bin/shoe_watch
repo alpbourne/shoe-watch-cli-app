@@ -2,4 +2,4 @@
 
 require relative '../lib/shoe_watch_cli_app'
 
-#ShoeWatch::CLI.new.call - have not created method yet
+ShoeWatch::CLI.new.call
