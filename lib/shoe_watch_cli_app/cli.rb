@@ -10,8 +10,20 @@ class ShoeWatchCliApp::CLI
     puts "Please enter the number of the type of shoe you would like to see the latest trend in?"
     puts "1. Running"
     puts "2. Fashion Sneaker"
-    input = gets.strip.downcase
+    @input = gets.strip
   end
+
+  def shoe_list
+    @running_shoes = ShoeWatchCliApp::Shoes.running
+    if @input == "1"
+      @running_shoes.each do |shoe|
+        puts "#{shoe.brand}"
+        puts "#{shoe.name}"
+        puts "#{shoe.description}"
+        puts "#{shoe.price}"
+        puts "#{shoe.description}"
+      end
+    end
 
   def goodbye
     puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"
