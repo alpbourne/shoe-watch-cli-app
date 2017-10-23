@@ -4,7 +4,6 @@ class ShoeWatchCliApp::CLI
     greeting
     option_list
     decision
-    goodbye
   end
 
   def greeting
@@ -29,6 +28,8 @@ class ShoeWatchCliApp::CLI
         puts "Here are Lifestyle shoes..."
       when "list"
         option_list
+      when "exit"
+        puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"
       else
         puts "Input not valid."
       end
@@ -47,9 +48,5 @@ class ShoeWatchCliApp::CLI
   #     end
   #   end
   # end
-
-  def goodbye
-    puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"
-  end
 
 end
