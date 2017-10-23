@@ -12,6 +12,7 @@ class ShoeWatchCliApp::CLI
     puts "2. Fashion Sneaker"
     input = nil
     while input != "exit"
+      puts "Please enter the number of the shoe type you would like to see the latest trend in or type exit."
       input = gets.strip.downcase
       case input
       when "1"
