@@ -24,6 +24,7 @@ class ShoeWatchCliApp::CLI
         puts "#{shoe.description}"
       end
     end
+  end
 
   def goodbye
     puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"

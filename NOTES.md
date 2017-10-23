@@ -1,6 +1,6 @@
 Command Line Interface for Shoe Watch
 
-Purpose: to show users bestselling shoes in different categories from Nike, Addidas, and Under Armour. Users will be given information regarding each shoe presented to them. This simplifies the users online shopping experience. If a user's interest is sparked, then they can follow the URL to see that specific shoe or others on the respective brand's website.
+Purpose: to show users bestselling shoes in different categories from Nike, Adidas, and Under Armour. Users will be given information regarding each shoe presented to them. This simplifies the users online shopping experience. If a user's interest is sparked, then they can follow the URL to see that specific shoe or others on the respective brand's website.
 
 Structure:
   Welcome the users to Shoe Watch
