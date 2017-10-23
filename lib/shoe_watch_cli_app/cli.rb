@@ -10,14 +10,14 @@ class ShoeWatchCliApp::CLI
     puts "Please enter the number of the shoe type you would like to see the latest trend in or type exit."
     puts "1. Running"
     puts "2. Fashion Sneaker"
+    input = nil
     while input != "exit"
-        @input = gets.strip.downcase
-        case input
-        when "1"
-          puts "Here are running shoes..."
-        when "2"
-          puts "Here are Lifestyle shoes..."
-        end
+      input = gets.strip.downcase
+      case input
+      when "1"
+        puts "Here are running shoes..."
+      when "2"
+        puts "Here are Lifestyle shoes..."
       end
     end
   end
