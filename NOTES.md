@@ -6,7 +6,7 @@ Structure:
   Welcome the users to Shoe Watch
     What kind of shoe are you looking for today?
       1. Running
-      2. Fashion
+      2. Lifestyle
 
   If input = 1
     present user with the following information for a bestselling running shoe from each of the brands
