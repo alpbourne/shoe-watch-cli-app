@@ -1,6 +1,10 @@
 class ShoeWatchCliApp::Shoes
   attr_accessor :name, :brand, :price, :description, :url
 
+  def self.running
+    self.running_shoes
+  end
+
   def self.running_shoes
     running_shoes = []
     running_shoes << self.scrape_addidas_running
