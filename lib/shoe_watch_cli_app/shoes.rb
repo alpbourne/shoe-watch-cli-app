@@ -1,3 +1,6 @@
+require "pry"
+require "nokogiri"
+
 class ShoeWatchCliApp::Shoes
   attr_accessor :name, :brand, :price, :description, :url
 
@@ -18,6 +21,7 @@ class ShoeWatchCliApp::Shoes
     radidas = self.new
     radidas.brand = "Adidas"
     radidas.name = doc.search("div.product-info-inner.content clearfix data-productname").text.strip
+    binding.pry
     radidas.description = " "
     radidas.price = " "
     radidas.url = " "
