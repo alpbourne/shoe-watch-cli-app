@@ -2,23 +2,35 @@ class ShoeWatchCliApp::CLI
 
   def call
     greeting
+    option_list
+    decision
     goodbye
   end
 
   def greeting
     puts "Welcome to Shoe Watch! We are so glad you are here!"
-    puts "Please enter the number of the shoe type you would like to see the latest trend in or type exit."
+    puts "Here are some shoe types you can check out:"
+  end
+
+  def option_list
     puts "1. Running"
-    puts "2. Fashion Sneaker"
+    puts "2. Lifestyle"
+  end
+
+  def decision
     input = nil
     while input != "exit"
-      puts "Please enter the number of the shoe type you would like to see the latest trend in or type exit."
+      puts "Please enter the number of the shoe type you would like to see the latest trend in or 'list'for your options or type exit."
       input = gets.strip.downcase
       case input
       when "1"
-        puts "Here are running shoes..."
+        puts "Here are Running shoes..."
       when "2"
         puts "Here are Lifestyle shoes..."
+      when "list"
+        option_list
+      else
+        puts "Input not valid."
       end
     end
   end
