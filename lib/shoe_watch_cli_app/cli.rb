@@ -22,18 +22,18 @@ class ShoeWatchCliApp::CLI
     end
   end
 
-  def shoe_list
-    @running_shoes = ShoeWatchCliApp::Shoes.running
-    if @input == "1"
-      @running_shoes.each do |shoe|
-        puts "#{shoe.brand}"
-        puts "#{shoe.name}"
-        puts "#{shoe.description}"
-        puts "#{shoe.price}"
-        puts "#{shoe.description}"
-      end
-    end
-  end
+  # def shoe_list
+  #   @running_shoes = ShoeWatchCliApp::Shoes.running
+  #   if @input == "1"
+  #     @running_shoes.each do |shoe|
+  #       puts "#{shoe.brand}"
+  #       puts "#{shoe.name}"
+  #       puts "#{shoe.description}"
+  #       puts "#{shoe.price}"
+  #       puts "#{shoe.description}"
+  #     end
+  #   end
+  # end
 
   def goodbye
     puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"
