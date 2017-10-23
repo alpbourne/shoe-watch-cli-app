@@ -17,7 +17,7 @@ class ShoeWatchCliApp::Shoes
     doc = Nokogiri::HTML(open("http://www.adidas.com/us/women-best_sellers-running-shoes?srule=top-sellers"))
     radidas = self.new
     radidas.brand = "Adidas"
-    radidas.name = " "
+    radidas.name = doc.search("div.product-info-inner.content clearfix data-productname").text.strip
     radidas.description = " "
     radidas.price = " "
     radidas.url = " "
