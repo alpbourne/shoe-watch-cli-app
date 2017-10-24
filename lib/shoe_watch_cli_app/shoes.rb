@@ -19,11 +19,10 @@ class ShoeWatchCliApp::Shoes
     rnike.brand = "Nike"
     rnike.name =  doc.css("div.exp-product-header h1").text.strip
       binding.pry
-
-    rnike.description = " "
+    rnike.description = doc.css("div.pi-pdpmainbody p")[1].text.strip
     rnike.price = " "
     rnike.url = " "
-    
+
     rnike
   end
 
