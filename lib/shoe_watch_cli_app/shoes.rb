@@ -14,12 +14,12 @@ class ShoeWatchCliApp::Shoes
   # end
 
   def self.scrape_nike_running
-    doc = Nokogiri::HTML(open("http://www.adidas.com/us/women-running-shoes-new_arrivals?srule=top-sellers"))
+    doc = Nokogiri::HTML(open("https://store.nike.com/us/en_us/pd/zoom-vaporfly-4-unisex-running-shoe/pid-11833217/pgid-11936020"))
     rnike = self.new
     rnike.brand = "Nike"
-    rnike.name = doc.search("div.id").text.strip
+    rnike.name =  doc.css("div.exp-product-header h1").text.strip
       binding.pry
-    rnike.name = doc.search("div.product-info-inner.content clearfix data-productname").text.strip
+
     rnike.description = " "
     rnike.price = " "
     rnike.url = " "
