@@ -14,7 +14,7 @@ class ShoeWatchCliApp::Shoes
   # end
 
   def self.scrape_nike_running
-    doc = Nokogiri::HTML(open("https://www.nike.com/us/en_us/"))
+    doc = Nokogiri::HTML(open("http://www.adidas.com/us/women-running-shoes-new_arrivals?srule=top-sellers"))
     rnike = self.new
     rnike.brand = "Nike"
     rnike.name = doc.search("div.id").text.strip
