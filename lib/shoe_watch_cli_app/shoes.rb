@@ -31,6 +31,7 @@ class ShoeWatchCliApp::Shoes
     rua.brand = "Under Armour"
     rua.name = doc.css("h1.buypanel_producttitle span").text.strip
     rua.description = doc.css("div.science-paragraph").text.strip
+    rua.price = doc.css("span.buypanel_productprice-value span").text.strip
     binding.pry
   end
 
