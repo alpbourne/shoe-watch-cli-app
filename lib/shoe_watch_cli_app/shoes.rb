@@ -20,17 +20,16 @@ class ShoeWatchCliApp::Shoes
     rnike.name =  doc.css("div.exp-product-header h1").text.strip
     rnike.description = doc.css("div.pi-pdpmainbody p")[1].text.strip
     rnike.price = doc.css("div.exp-pdp-product-price span").text.strip
-    binding.pry
-    rnike.url = " "
+    rnike.url = "https://store.nike.com/us/en_us/pd/zoom-vaporfly-4-unisex-running-shoe/pid-11833217/pgid-11936020"
 
     rnike
   end
 
-  def self.scrape_adidas_running
+  def self.scrape_under_armour_running
 
   end
 
-  def self.scrape_under_armour_running
+  def self.scrape_adidas_running
 
   end
 
