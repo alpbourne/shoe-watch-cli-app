@@ -26,7 +26,11 @@ class ShoeWatchCliApp::Shoes
   end
 
   def self.scrape_under_armour_running
-
+    doc = Nokogiri::HTML(open("https://www.underarmour.com/en-us/ua-w-highlight-delta-2/pid1295766-002"))
+    runder = self.new
+    rua.brand = "Under Armour"
+    rua.name = doc.css("").text.strip
+    binding.pry
   end
 
   def self.scrape_adidas_running
