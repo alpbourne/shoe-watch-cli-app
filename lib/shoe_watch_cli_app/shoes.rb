@@ -14,11 +14,14 @@ class ShoeWatchCliApp::Shoes
   # end
 
   def self.scrape_adidas_running
-    doc = Nokogiri::HTML(open("https://www.adidas.com/us/women-best_sellers-running-shoes"))
+    #puts "hello"
+    doc = Nokogiri::HTML(open("https://www.weather.com"))
     radidas = self.new
     radidas.brand = "Adidas"
-    radidas.name = doc.search("div.product-info-inner.content clearfix data-productname").text.strip
-    binding.pry
+    radidas.name = doc.search("div.id").text.strip
+    puts radidas.name
+      binding.pry
+    #radidas.name = doc.search("div.product-info-inner.content clearfix data-productname").text.strip
     # radidas.description = " "
     # radidas.price = " "
     # radidas.url = " "

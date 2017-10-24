@@ -14,6 +14,7 @@ class ShoeWatchCliApp::CLI
   def option_list
     puts "1. Running"
     puts "2. Lifestyle"
+    binding.pry
   end
 
   def decision
