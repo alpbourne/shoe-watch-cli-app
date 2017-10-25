@@ -62,7 +62,7 @@ class ShoeWatchCliApp::Shoes
     lua = self.new
     lua.brand = "Under Armour"
     lua.name = doc.css("h1.buypanel_producttitle span").text.strip
-    lua.description = doc.css("div.product-dna li")[0].text.strip
+    lua.description = doc.css("div.product-dna li")[0].text.gsub("â\u0084¢","").strip
     lua.price = doc.css("span.buypanel_productprice-value span").text.strip
     lua.url = "https://www.underarmour.com/en-us/womens-ua-threadborne-shift-lifestyle-shoes/pid3019918-600"
     binding.pry
