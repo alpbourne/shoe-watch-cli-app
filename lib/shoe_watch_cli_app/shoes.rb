@@ -5,13 +5,19 @@ class ShoeWatchCliApp::Shoes
     self.running_shoes
   end
 
-  # def self.running_shoes
-  #   running_shoes = []
-  #   running_shoes << self.scrape_adidas_running
-  #   running_shoes << self.scrape_nike_running
-  #   running_shoes << self.scrape_under_armour_running
-  #   running_shoes
-  # end
+  def self.running_shoes
+    running_shoes = []
+    running_shoes << self.scrape_nike_running
+    running_shoes << self.scrape_under_armour_running
+    running_shoes
+  end
+
+  def self.lifestyle_shoes
+    lifestyle_shoes = []
+    lifestyle_shoes << self.scrape_nike_lifestyle
+    lifestyle_shoes << self.scrape_under_armour_lifestyle
+    lifestyle_shoes
+  end
 
   def self.scrape_nike_running
     doc = Nokogiri::HTML(open("https://store.nike.com/us/en_us/pd/zoom-vaporfly-4-unisex-running-shoe/pid-11833217/pgid-11936020"))
@@ -35,14 +41,6 @@ class ShoeWatchCliApp::Shoes
     rua.url = "https://www.underarmour.com/en-us/ua-w-highlight-delta-2/pid1295766-002"
 
     rua
-  end
-
-  def self.scrape_adidas_running
-
-  end
-
-  def self.scrape_addidas_lifestyle
-
   end
 
   def self.scrape_nike_lifestyle
