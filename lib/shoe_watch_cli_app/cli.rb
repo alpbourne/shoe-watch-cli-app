@@ -40,20 +40,15 @@ class ShoeWatchCliApp::CLI
   end
 
   def display_lifestyle
-    puts "Here are some Lifestyle shoes:"
-    # @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
-    # @running_lifestyle.each.with_index(1) do |shoe, i|
-    #   puts "#{i}. #{shoe.brand} - #{shoe.name}"
-    # end
-    # puts "Would you like more details? Y/N"
-    # input = gets.strip
-    # case input
-    # when "Y"
-    #   puts "lifestyle details"
-    # when "N"
-    #   puts "We are taking you back to the main menu"
-    #   decision
-    # end
+    puts "Here are some details:"
+    @lifestyle_details = ShoeWatchCliApp::Shoes.lifestyle
+    @lifestyle_details.each.with_index(1) do |shoe, i|
+      puts "#{i}. #{shoe.brand} - #{shoe.name}"
+      puts "#{shoe.price}"
+      puts "#{shoe.description}"
+      puts "#{shoe.url}"
+      puts ""
+    end
   end
 
   def decision
