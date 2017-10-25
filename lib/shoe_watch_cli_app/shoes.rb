@@ -31,7 +31,6 @@ class ShoeWatchCliApp::Shoes
     rnike.description = doc.css("div.pi-pdpmainbody p")[1].text.strip
     rnike.price = doc.css("div.exp-pdp-product-price span").text.strip
     rnike.url = "https://store.nike.com/us/en_us/pd/zoom-vaporfly-4-unisex-running-shoe/pid-11833217/pgid-11936020"
-
     rnike
   end
 
@@ -43,7 +42,6 @@ class ShoeWatchCliApp::Shoes
     rua.description = doc.css("div.science-paragraph").text.gsub("â","`").strip
     rua.price = doc.css("span.buypanel_productprice-value span").text.strip
     rua.url = "https://www.underarmour.com/en-us/ua-w-highlight-delta-2/pid1295766-002"
-
     rua
   end
 
@@ -55,7 +53,6 @@ class ShoeWatchCliApp::Shoes
     lnike.description = doc.css("div.pi-pdpmainbody p")[1].text.strip
     lnike.price = doc.css("div.exp-pdp-product-price span").text.strip
     lnike.url = "https://store.nike.com/us/en_us/pd/roshe-one-womens-shoe/pid-11827121/pgid-11166166"
-
     lnike
   end
 
@@ -69,5 +66,4 @@ class ShoeWatchCliApp::Shoes
     lua.url = "https://www.underarmour.com/en-us/womens-ua-threadborne-shift-lifestyle-shoes/pid3019918-600"
     lua
   end
-
 end
