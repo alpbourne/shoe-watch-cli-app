@@ -40,15 +40,17 @@ class ShoeWatchCliApp::Shoes
 
   end
 
-  def self.scrape_addidas_fashion
+  def self.scrape_addidas_lifestyle
 
   end
 
-  def self.scrape_nike_fashion
+  def self.scrape_nike_lifestyle
+    doc = Nokogiri::HTML(open("https://store.nike.com/us/en_us/pd/roshe-one-womens-shoe/pid-11827121/pgid-11166166"))
+    binding.pry
 
   end
 
-  def self.scrape_under_armour_fashion
+  def self.scrape_under_armour_lifestyle
 
   end
 
