@@ -33,7 +33,8 @@ class ShoeWatchCliApp::Shoes
     rua.description = doc.css("div.science-paragraph").text.strip
     rua.price = doc.css("span.buypanel_productprice-value span").text.strip
     rua.url = "https://www.underarmour.com/en-us/ua-w-highlight-delta-2/pid1295766-002"
-    binding.pry
+
+    rua
   end
 
   def self.scrape_adidas_running
@@ -46,8 +47,15 @@ class ShoeWatchCliApp::Shoes
 
   def self.scrape_nike_lifestyle
     doc = Nokogiri::HTML(open("https://store.nike.com/us/en_us/pd/roshe-one-womens-shoe/pid-11827121/pgid-11166166"))
+    lnike = self.new
+    lnike.brand = "Nike"
+    lnike.name = doc.css("div.exp-product-header h1").text.strip
+    lnike.description = doc.css("div.pi-pdpmainbody p")[1].text.strip
+    lnike.price = doc.css("div.exp-pdp-product-price span").text.strip
+    lnike.url = "https://store.nike.com/us/en_us/pd/roshe-one-womens-shoe/pid-11827121/pgid-11166166"
     binding.pry
 
+    lnike
   end
 
   def self.scrape_under_armour_lifestyle
