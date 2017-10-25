@@ -54,7 +54,7 @@ class ShoeWatchCliApp::CLI
   def decision
     input = nil
     while input != "exit"
-      puts "Please enter the number of the shoe type you would like to see the latest trend in or 'list'for your options or type exit."
+      puts "Please enter the number of the shoe type you would like to see details for, 'options' for a list of your options, or type exit."
       input = gets.strip.downcase
       case input
       when "1"
