@@ -15,7 +15,6 @@ class ShoeWatchCliApp::Shoes
     running_shoes << self.scrape_under_armour_running
     running_shoes << self.scrape_saucony_running
     running_shoes
-    binding.pry
   end
 
   def self.lifestyle_shoes
@@ -78,5 +77,15 @@ class ShoeWatchCliApp::Shoes
     lua.price = doc.css("span.buypanel_productprice-value span").text.strip
     lua.url = "https://www.underarmour.com/en-us/womens-ua-threadborne-shift-lifestyle-shoes/pid3019918-600"
     lua
+  end
+  def self.scrape_saucony_lifestyle
+    doc = Nokogiri::HTML(open("http://www.saucony.com/en/dxn-trainer-cl-nubuck/29331W.html?dwvar_29331W_color=S60360-1#cgid=womens-new-arrivals&prefn1=itemStyle&prefv1=Casual&prefn2=productType&prefv2=SH&srule=newest&start=1"))
+    lsaucony = self.new
+    lsaucony.brand = "Saucony"
+    lsaucony.name = doc.css("div.product-v2-name h1").text.strip
+    lsaucony.description = doc.css("div.description")[1].text.strip
+    lsaucony.price = doc.css("div.product-price span.price-sales").text.strip
+    lsaucony.url = "http://www.saucony.com/en/dxn-trainer-cl-nubuck/29331W.html?dwvar_29331W_color=S60360-1#cgid=womens-new-arrivals&prefn1=itemStyle&prefv1=Casual&prefn2=productType&prefv2=SH&srule=newest&start=1"
+    lsaucony
   end
 end
