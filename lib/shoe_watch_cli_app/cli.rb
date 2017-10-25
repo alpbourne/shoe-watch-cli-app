@@ -12,35 +12,43 @@ class ShoeWatchCliApp::CLI
   end
 
   def option_list
+    @running_shoes = ShoeWatchCliApp::Shoes.running
+    @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
     puts "1. Running"
+    @running_shoes.each.with_index(1) do |shoe, i|
+      puts "#{i}. #{shoe.brand} - #{shoe.name}"
+    end
     puts "2. Lifestyle"
+    @running_lifestyle.each.with_index(1) do |shoe, i|
+      puts "#{i}. #{shoe.brand} - #{shoe.name}"
+    end
   end
 
   def display_running
     puts "Here are some running shoes:"
-    @running_shoes = ShoeWatchCliApp::Shoes.running
-    @running_shoes.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.brand} - #{shoe.name}"
-    end
-    puts "Would you like more details?"
-      binding.pry
+    # @running_shoes = ShoeWatchCliApp::Shoes.running
+    # @running_shoes.each.with_index(1) do |shoe, i|
+    #   puts "#{i}. #{shoe.brand} - #{shoe.name}"
+    # end
+    # puts "Would you like more details?"
+    #   binding.pry
   end
 
   def display_lifestyle
     puts "Here are some Lifestyle shoes:"
-    @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
-    @running_lifestyle.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.brand} - #{shoe.name}"
-    end
-    puts "Would you like more details? Y/N"
-    input = gets.strip
-    case input
-    when "Y"
-      puts "lifestyle details"
-    when "N"
-      puts "We are taking you back to the main menu"
-      decision
-    end
+    # @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
+    # @running_lifestyle.each.with_index(1) do |shoe, i|
+    #   puts "#{i}. #{shoe.brand} - #{shoe.name}"
+    # end
+    # puts "Would you like more details? Y/N"
+    # input = gets.strip
+    # case input
+    # when "Y"
+    #   puts "lifestyle details"
+    # when "N"
+    #   puts "We are taking you back to the main menu"
+    #   decision
+    # end
   end
 
   def decision
