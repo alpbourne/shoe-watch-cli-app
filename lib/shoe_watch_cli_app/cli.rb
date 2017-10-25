@@ -31,8 +31,7 @@ class ShoeWatchCliApp::CLI
     puts "Here are some details:"
     @running_details = ShoeWatchCliApp::Shoes.running
     @running_details.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.brand} - #{shoe.name}"
-      puts "#{shoe.price}"
+      puts "#{i}. #{shoe.brand} - #{shoe.name} - #{shoe.price}"
       puts "#{shoe.description}"
       puts "#{shoe.url}"
       puts ""
@@ -43,8 +42,7 @@ class ShoeWatchCliApp::CLI
     puts "Here are some details:"
     @lifestyle_details = ShoeWatchCliApp::Shoes.lifestyle
     @lifestyle_details.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.brand} - #{shoe.name}"
-      puts "#{shoe.price}"
+      puts "#{i}. #{shoe.brand} - #{shoe.name} - #{shoe.price}"
       puts "#{shoe.description}"
       puts "#{shoe.url}"
       puts ""

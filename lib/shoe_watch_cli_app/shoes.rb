@@ -40,7 +40,7 @@ class ShoeWatchCliApp::Shoes
     rua = self.new
     rua.brand = "Under Armour"
     rua.name = doc.css("h1.buypanel_producttitle span").text.strip
-    rua.description = doc.css("div.science-paragraph").text.strip
+    rua.description = doc.css("div.science-paragraph").text.gsub("â","`").strip
     rua.price = doc.css("span.buypanel_productprice-value span").text.strip
     rua.url = "https://www.underarmour.com/en-us/ua-w-highlight-delta-2/pid1295766-002"
 
