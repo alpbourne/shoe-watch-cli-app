@@ -15,12 +15,12 @@ class ShoeWatchCliApp::CLI
     @running_shoes = ShoeWatchCliApp::Shoes.running
     @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
     puts "1. Running"
-    @running_shoes.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.brand} - #{shoe.name}"
+    @running_shoes.each do |shoe|
+      puts "#{shoe.brand} - #{shoe.name}"
     end
     puts "2. Lifestyle"
-    @running_lifestyle.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.brand} - #{shoe.name}"
+    @running_lifestyle.each do |shoe|
+      puts "#{shoe.brand} - #{shoe.name}"
     end
   end
 
