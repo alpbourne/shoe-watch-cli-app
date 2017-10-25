@@ -68,5 +68,4 @@ class ShoeWatchCliApp::CLI
       end
     end
   end
-
 end
