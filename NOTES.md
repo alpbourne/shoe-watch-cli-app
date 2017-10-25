@@ -12,13 +12,16 @@ Structure:
     present user with the following information for a new arrival running shoe from each of the brands
       -brand name
       -shoe name
-      -description
-      -price
-      -URL
+        Which shoe would you like to get more information on?
+          -description
+          -price
+          -URL
 
   If input = 2
     present user with the following information for a new arrival lifestyle shoe from each of the brands
       -brand name
       -shoe name
-      -description
-      -price
+          Which shoe would you like to get more information on?
+            -description
+            -price
+            -URL
