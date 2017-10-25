@@ -21,6 +21,7 @@ class ShoeWatchCliApp::Shoes
     lifestyle_shoes = []
     lifestyle_shoes << self.scrape_nike_lifestyle
     lifestyle_shoes << self.scrape_under_armour_lifestyle
+    lifestyle_shoes << self.scrape_saucony_lifestyle
     lifestyle_shoes
   end
 
