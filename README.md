@@ -1,8 +1,8 @@
 # ShoeWatchCliApp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shoe_watch_cli_app`. To experiment with that code, run `bin/console` for an interactive prompt.
+The purpose of Shoe Watch is to show users new arrival shoes in different categories from Nike and Under Armour. Users will be given basic information regarding each shoe presented to them, then they can choose see more details. This simplifies the users online shopping experience. If a user's interest is sparked, then they can follow the URL to see that specific shoe or others on the respective brand's website.
 
-TODO: Delete this and the text above, and describe your gem
+This gem is not just for shoes. This gem is already loaded with data for shoes, but you can easily swap out that data for other trendy things like jewelry, toys, clothes, cars, and any other item you would like to promote.
 
 ## Installation
 
