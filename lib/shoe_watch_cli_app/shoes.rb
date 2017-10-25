@@ -49,9 +49,10 @@ class ShoeWatchCliApp::Shoes
     doc = Nokogiri::HTML(open("http://www.saucony.com/en/nyc-freedom-iso/30835W.html?dwvar_30835W_color=S10355-18#cgid=womens-new-arrivals&prefn1=itemStyle&prefv1=Running&prefn2=productType&prefv2=SH&srule=newest&start=1"))
     rsaucony = self.new
     rsaucony.brand = "Saucony"
-    rsaucony.name = 
-    rsaucony
-    rsaucony
+    rsaucony.name = doc.css("div.product-v2-name h1").text.strip
+    binding.pry
+    #rsaucony.desciption
+    rsaucony.price = doc.css("div.product-price span.price-sales").text.strip
     rsaucony
   end
 
