@@ -26,6 +26,16 @@ class ShoeWatchCliApp::CLI
       binding.pry
   end
 
+  def display_lifestyle
+    puts "Here are some running shoes:"
+    @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
+    @running_lifestyle.each.with_index(1) do |shoe, i|
+      puts "#{i}. #{shoe.brand} - #{shoe.name}"
+    end
+    puts "Would you like more details?"
+      binding.pry
+  end
+
   def decision
     input = nil
     while input != "exit"
@@ -35,7 +45,7 @@ class ShoeWatchCliApp::CLI
       when "1"
         display_running
       when "2"
-        "Here are Lifestyle shoes..."
+        display_lifestyle
       when "list"
         option_list
       when "exit"
