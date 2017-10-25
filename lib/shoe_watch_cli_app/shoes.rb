@@ -50,10 +50,9 @@ class ShoeWatchCliApp::Shoes
     rsaucony = self.new
     rsaucony.brand = "Saucony"
     rsaucony.name = doc.css("div.product-v2-name h1").text.strip
-    binding.pry
-    #rsaucony.desciption
+    rsaucony.description = doc.css("div.description")[1].text.strip
     rsaucony.price = doc.css("div.product-price span.price-sales").text.strip
-    rsaucony
+    rsaucony.url = "http://www.saucony.com/en/nyc-freedom-iso/30835W.html?dwvar_30835W_color=S10355-18#cgid=womens-new-arrivals&prefn1=itemStyle&prefv1=Running&prefn2=productType&prefv2=SH&srule=newest&start=1"
   end
 
   def self.scrape_nike_lifestyle
