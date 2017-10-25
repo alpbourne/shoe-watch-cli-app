@@ -14,22 +14,24 @@ class ShoeWatchCliApp::CLI
   def option_list
     puts "1. Running"
     puts "2. Lifestyle"
-    binding.pry
   end
 
   def decision
+    @running_shoes = ShoeWatchCliApp::Shoes.running
+    @lifstyle_shoes = ShoeWatchCliApp::Shoes.running
     input = nil
     while input != "exit"
       puts "Please enter the number of the shoe type you would like to see the latest trend in or 'list'for your options or type exit."
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "Here are Running shoes..."
-      when "2"
-        puts "Here are Lifestyle shoes..."
-      when "list"
+      if input.to_i == 1
+        @running_shoes.each.with_index(1) do |shoe, i|
+        puts "#{i}. #{shoe.brand} - #{shoe.name}"
+      elsif input.to_i == 1
+        @lifestyle_shoes.each.with_index(1) do |shoe, i|
+        puts "#{i}. #{shoe.brand} - #{shoe.name}"
+      elsif "list"
         option_list
-      when "exit"
+      elsif "exit"
         puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"
       else
         puts "Input not valid."

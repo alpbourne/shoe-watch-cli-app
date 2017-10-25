@@ -5,6 +5,10 @@ class ShoeWatchCliApp::Shoes
     self.running_shoes
   end
 
+  def self.lifestyle
+    self.lifestyle_shoes
+  end
+
   def self.running_shoes
     running_shoes = []
     running_shoes << self.scrape_nike_running
