@@ -1,6 +1,6 @@
 # ShoeWatchCliApp
 
-The purpose of Shoe Watch is to show users new arrival shoes in different categories from Nike and Under Armour. Users will be given basic information regarding each shoe presented to them, then they can choose see more details. This simplifies the users online shopping experience. If a user's interest is sparked, then they can follow the URL to see that specific shoe or others on the respective brand's website.
+The purpose of Shoe Watch is to show users new arrival shoes in different categories from Nike and Under Armour. Users will be given basic information regarding each shoe presented to them, then they can choose to see more details. This simplifies the users online shopping experience. If a user's interest is sparked, then they can follow the URL to see that specific shoe or others on the respective brand's website.
 
 This gem is not just for shoes. This gem is already loaded with data for shoes, but you can easily swap out that data for other trendy things like jewelry, toys, clothes, cars, and any other item you would like to promote.
 
