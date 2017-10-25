@@ -8,7 +8,7 @@ class ShoeWatchCliApp::CLI
 
   def greeting
     puts "Welcome to Shoe Watch! We are so glad you are here!"
-    puts "Which type of shoe do you want to check out?"
+    puts "Here are some of the latest arrivals. Please enter the number of the shoe type (1 or 2) you would like to see the latest trend in, 'list'for your options, or type exit."
   end
 
   def option_list
@@ -38,6 +38,7 @@ class ShoeWatchCliApp::CLI
     when "Y"
       puts "lifestyle details"
     when "N"
+      puts "We are taking you back to the main menu"
       decision
     end
   end
