@@ -9,7 +9,7 @@ class ShoeWatchCliApp::CLI
 
   def greeting
     puts "Welcome to Shoe Watch! We are so glad you are here!"
-    puts "Here are some shoe types you can check out:"
+    puts "Which type of shoe do you want to check out?"
   end
 
   def option_list
@@ -18,10 +18,12 @@ class ShoeWatchCliApp::CLI
   end
 
   def display_running
+    puts "Here are some running shoes:"
     @running_shoes = ShoeWatchCliApp::Shoes.running
     @running_shoes.each.with_index(1) do |shoe, i|
       puts "#{i}. #{shoe.brand} - #{shoe.name}"
     end
+    puts "Would you like more details?"
       binding.pry
   end
 
