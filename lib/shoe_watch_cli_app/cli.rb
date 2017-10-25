@@ -25,13 +25,15 @@ class ShoeWatchCliApp::CLI
   end
 
   def display_running
-    puts "Here are some running shoes:"
-    # @running_shoes = ShoeWatchCliApp::Shoes.running
-    # @running_shoes.each.with_index(1) do |shoe, i|
-    #   puts "#{i}. #{shoe.brand} - #{shoe.name}"
-    # end
-    # puts "Would you like more details?"
-    #   binding.pry
+    puts "Here are some details:"
+    @running_details = ShoeWatchCliApp::Shoes.running
+    @running_details.each.with_index(1) do |shoe, i|
+      puts "#{i}. #{shoe.brand} - #{shoe.name}"
+      puts "#{shoe.price}"
+      puts "#{shoe.description}"
+      puts "#{shoe.url}"
+      puts ""
+    end
   end
 
   def display_lifestyle
