@@ -3,8 +3,7 @@ class ShoeWatchCliApp::CLI
   def call
     greeting
     option_list
-    display_running
-    #decision
+    decision
   end
 
   def greeting
@@ -26,6 +25,27 @@ class ShoeWatchCliApp::CLI
     puts "Would you like more details?"
       binding.pry
   end
+
+  def decision
+    input = nil
+    while input != "exit"
+      puts "Please enter the number of the shoe type you would like to see the latest trend in or 'list'for your options or type exit."
+      input = gets.strip.downcase
+      case input
+      when "1"
+        display_running
+      when "2"
+        "Here are Lifestyle shoes..."
+      when "list"
+        option_list
+      when "exit"
+        puts "Thank you for visiting Shoe Watch! Good luck in all your shoe endeavors!"
+      else
+        puts "Input not valid."
+      end
+    end
+  end
+
 
   # def decision
   #   @running_shoes = ShoeWatchCliApp::Shoes.running
