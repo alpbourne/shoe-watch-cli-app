@@ -27,13 +27,19 @@ class ShoeWatchCliApp::CLI
   end
 
   def display_lifestyle
-    puts "Here are some running shoes:"
+    puts "Here are some Lifestyle shoes:"
     @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
     @running_lifestyle.each.with_index(1) do |shoe, i|
       puts "#{i}. #{shoe.brand} - #{shoe.name}"
     end
-    puts "Would you like more details?"
-      binding.pry
+    puts "Would you like more details? Y/N"
+    input = gets.strip
+    case input
+    when "Y"
+      puts "lifestyle details"
+    when "N"
+      decision
+    end
   end
 
   def decision
