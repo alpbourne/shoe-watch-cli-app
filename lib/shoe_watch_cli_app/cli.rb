@@ -14,14 +14,17 @@ class ShoeWatchCliApp::CLI
   def option_list
     @running_shoes = ShoeWatchCliApp::Shoes.running
     @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
+    puts ""
     puts "1. Running"
     @running_shoes.each do |shoe|
       puts "#{shoe.brand} - #{shoe.name}"
     end
+    puts ""
     puts "2. Lifestyle"
     @running_lifestyle.each do |shoe|
       puts "#{shoe.brand} - #{shoe.name}"
     end
+    puts ""
   end
 
   def display_running
