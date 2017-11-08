@@ -1,28 +1,45 @@
 class ShoeWatchCliApp::Shoes
   attr_accessor :name, :brand, :price, :description, :url
 
+  @@running = []
+  @@lifestyle = []
+
   def self.running
-    self.running_shoes
+    @@running
   end
 
   def self.lifestyle
-    self.lifestyle_shoes
+    @@lifestyle
   end
 
+  def self.price_above(num)
+    #returns an array of all the shoes with a price above the num passed in
+    shoes_found = []
+
+    @@running.each do |shoe|
+      if shoe.price > num
+        shoes_found << shoe
+      end
+    end
+    @@lifestyle.each do |shoe|
+      if shoe.price > num
+        shoes_found << shoe
+      end
+    end
+
+    shoes_found
+  end
+  
   def self.running_shoes
-    running_shoes = []
-    running_shoes << self.scrape_nike_running
-    running_shoes << self.scrape_under_armour_running
-    running_shoes << self.scrape_saucony_running
-    running_shoes
+    @@running << ShoeWatchCliApp::Scraper.scrape_nike_running
+    @@running << self.scrape_under_armour_running
+    @@running << self.scrape_saucony_running
   end
 
   def self.lifestyle_shoes
-    lifestyle_shoes = []
-    lifestyle_shoes << self.scrape_nike_lifestyle
-    lifestyle_shoes << self.scrape_under_armour_lifestyle
-    lifestyle_shoes << self.scrape_saucony_lifestyle
-    lifestyle_shoes
+    @@lifestyle << self.scrape_nike_lifestyle
+    @@lifestyle << self.scrape_under_armour_lifestyle
+    @@lifestyle << self.scrape_saucony_lifestyle
   end
 
   def self.scrape_nike_running

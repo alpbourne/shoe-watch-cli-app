@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/shoe_watch_cli_app'
+#require '/home/alpbourne/temporary/shoe-watch-cli-app/lib/shoe_watch_cli_app'
+require_relative '../lib/shoe_watch_cli_app'
 
 ShoeWatchCliApp::CLI.new.call

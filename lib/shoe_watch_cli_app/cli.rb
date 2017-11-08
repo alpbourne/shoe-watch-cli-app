@@ -2,6 +2,8 @@ class ShoeWatchCliApp::CLI
 
   def call
     greeting
+    ShoeWatchCliApp::Shoes.running_shoes
+    ShoeWatchCliApp::Shoes.lifestyle_shoes
     option_list
     decision
   end
@@ -13,7 +15,7 @@ class ShoeWatchCliApp::CLI
 
   def option_list
     @running_shoes = ShoeWatchCliApp::Shoes.running
-    @running_lifestyle = ShoeWatchCliApp::Shoes.lifestyle
+    @lifestyle_shoes = ShoeWatchCliApp::Shoes.lifestyle
     puts ""
     puts "1. Running"
     @running_shoes.each do |shoe|
@@ -21,7 +23,7 @@ class ShoeWatchCliApp::CLI
     end
     puts ""
     puts "2. Lifestyle"
-    @running_lifestyle.each do |shoe|
+    @lifestyle_shoes.each do |shoe|
       puts "#{shoe.brand} - #{shoe.name}"
     end
     puts ""
