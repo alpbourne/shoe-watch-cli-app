@@ -12,6 +12,18 @@ class ShoeWatchCliApp::Shoes
     @@lifestyle
   end
 
+  def self.running_shoes
+    @@running << ShoeWatchCliApp::Scraper.scrape_nike_running
+    @@running << ShoeWatchCliApp::Scraper.scrape_under_armour_running
+    @@running << ShoeWatchCliApp::Scraper.scrape_saucony_running
+  end
+
+  def self.lifestyle_shoes
+    @@lifestyle << ShoeWatchCliApp::Scraper.scrape_nike_lifestyle
+    @@lifestyle << ShoeWatchCliApp::Scraper.scrape_under_armour_lifestyle
+    @@lifestyle << ShoeWatchCliApp::Scraper.scrape_saucony_lifestyle
+  end
+
   def self.price_above(num)
     #returns an array of all the shoes with a price above the num passed in
     shoes_found = []

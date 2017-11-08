@@ -3,8 +3,8 @@ class ShoeWatchCliApp::Scraper
   
   def self.running_shoes
     @@running << ShoeWatchCliApp::Scraper.scrape_nike_running
-    @@running << self.scrape_under_armour_running
-    @@running << self.scrape_saucony_running
+    @@running << ShoeWatchCliApp::Scraper.scrape_under_armour_running
+    @@running << ShoeWatchCliApp::Scraper.scrape_saucony_running
   end
 
   def self.lifestyle_shoes
