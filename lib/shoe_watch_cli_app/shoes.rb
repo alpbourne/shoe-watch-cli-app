@@ -31,7 +31,8 @@ class ShoeWatchCliApp::Shoes
     rnike.brand = "Nike"
     rnike.name =  doc.css("div.d-lg-ib.mb0-sm.mb8-lg h1.ncss-brand.pb1-sm.u-uppercase.fs24-sm.fs32-lg.lh18-sm.productTitle").text.strip
     rnike.description = doc.css("div.pi-pdpmainbody p")[1].text.strip
-    rnike.price = doc.css("div.exp-pdp-product-price span").text.strip
+    rnike.price = doc.css("div.d-lg-ib.mb0-sm.mb8-lg h2.rr-subtitle span.rr-price span").text.strip
+    binding.pry
     rnike.url = "https://store.nike.com/us/en_us/pd/zoom-vaporfly-4-unisex-running-shoe/pid-11833217/pgid-11936020"
     rnike
   end
